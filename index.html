@@ -19,7 +19,7 @@
     crossorigin="anonymous" />
 
   <!-- LINK TO SITE CSS -->
-  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../ProjectJenDannyJP/assets/css/style.css" />
 
 </head>
 
@@ -86,15 +86,25 @@
     </div>
   </div>
 
+  <button data-meal="food">Random Meal</button>
+  <div class="meal"></div>
+  <div class="instructions"></div>
+  <div class="mealthumb">
+  </div>
+
   <div class="container text-center">
     <div class="row">
       <div class="col">
         <div class="card" style="width: 15rem;">
           <img class="card-img-top" src="assets/images/food_placeholder.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Name of Recipe</h5>
-            <p class="card-text">Some recipe content depending on what the API allows us to pull.</p>
-            <a href="#" class="btn btn-primary">Click for Full Recipe</a>
+            <h5 class="meal"></h5>
+            <!--            <h5 class="card-title">Name of Recipe</h5> -->
+            <!-- <p class="card-text">Some recipe content depending on what the API allows us to pull.</p>-->
+
+            <p class="category"></p>
+            <p class="area"></p>
+            <button class="btn btn-primary" id="Meal1">Click for Full Recipe</button>
           </div>
         </div>
       </div>
@@ -271,6 +281,9 @@
 
   <!-- SCRIPT FOR JQUERY -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  -->
+
+
 
   <!-- SCRIPT FOR GRANIM.JS -->
 
