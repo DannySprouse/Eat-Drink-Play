@@ -21,6 +21,13 @@
   <!-- LINK TO SITE CSS -->
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 
+  <!-- LINK TO GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Passion+One|Roboto+Condensed" rel="stylesheet">
+
+  <!-- SCRIPT FOR GRANIM.JS -->
+
+  <script src="assets/javascript/granim.min.js"></script>
+
 </head>
 
 <!-- PAGE CONTENT -->
@@ -28,256 +35,323 @@
 <body>
   <a name="top"></a>
 
-  <div class="container" id="navigation">
-    <div class="row header">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#eat">EAT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#drink">DRINK</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#play">PLAY</a>
-        </li>
-      </ul>
+  <div class="container text-center" id="navigation">
+    <div class="row">
+      <div class="col">
+        <a class="nav-link" href="#eat">EAT</a>
+      </div>
+      <div class="col">
+        <a class="nav-link" href="#drink">DRINK</a>
+      </div>
+      <div class="col">
+        <a class="nav-link" href="#play">PLAY</a>
+      </div>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="container">
+    <div class="row">
+      <canvas id="canvas-image-blending"></canvas>
     </div>
   </div>
   <br />
 
   <div class="container">
     <div class="row">
-      <img src="assets/images/EATDRINKPLAY.jpg" alt="food bar menu gaming" />
-    </div>
-  </div>
-  <br />
-
-  <div class="container">
-    <div class="row">
-      <h1>EAT! DRINK! PLAY!</h1>
-      <p>
-        Have a brief introductory blurb about what our site is about....pairing a meal with a drink and a game. Lorem ipsum dolor
-        sit amet, at nunc et placerat ac, a aliquam mollis. Vel elit urna sodales phasellus cursus sed, risus adipiscing
-        taciti ultricies quos diam integer, dignissim et, et inceptos ex, enim tincidunt commodo et mattis. Dolor mauris,
-        luctus mi quam sociis et magna, aliquam in. Nisl in malesuada aperiam dignissim, pulvinar in felis aliquam ipsum,
-        est aliquam pellentesque. Dolor mi nullam, justo interdum ac iaculis, est sit etiam felis mauris erat sed. Erat consectetuer,
-        vivamus velit erat metus tellus ipsum, porttitor eget aliquam donec in quam, sodales malesuada natoque massa sodales
-        lorem qui, phasellus ac ante aliquam nunc. Sed sapien tincidunt dui dui, egestas vivamus. Vel wisi, aliquam semper
-        sollicitudin arcu.
+      <h1 id="edp">EAT! &nbsp; &nbsp; DRINK! &nbsp; &nbsp;PLAY!</h1>
+      <p class="blurb">
+        Welcome to Eat Drink Play. We're glad you stopped by. Ever have one of those days where nothing you do ever pleases the boss?
+        You know what it's like to spend your entire day having to make the tough calls and the important decisions. Now
+        you come home, and there's still more thinking to do. You have to figure out what you want to eat, maybe whether
+        you'll have that cocktail, and how you are just going to get your poor frazzled brain to chill! Well you can relax,
+        we've got you covered!
       </p>
+      <p class="blurb">Below we will help you figure out something to eat, and perhaps a drink to go with it. And once you're all set on dining
+        and a beverage, we'll set you up with a game you can play so you can give your tired brain a break!
+      </p>
+      <p id="drink">Please drink responsibly. And if you do drink, please don't drive!</p>
     </div>
+    <hr />
   </div>
   <br />
   <br />
 
   <!-- EAT -->
   <div class="container">
-    <div class="card mb-3" id="food">
-      <a name="eat">
-        <img class="card-img-top" src="assets/images/861188910-2048x2048.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h1 class="card-title">GET SOMETHING TO EAT</h1>
-      </a>
-      <p class="card-text">Here list whatever search parameters we want to use from the API.</p>
-      <a href="#" class="btn btn-primary">Click to find some food</a>
-      <br />
-      <a href="#top">Back to top of page</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="container text-center">
     <div class="row">
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="assets/images/food_placeholder.jpg" alt="Card image cap">
+      <div class="card mb-3" id="food">
+        <a name="eat">
+          <img class="card-img-top" src="assets/images/861188910-2048x2048.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Name of Recipe</h5>
-            <p class="card-text">Some recipe content depending on what the API allows us to pull.</p>
-            <a href="#" class="btn btn-primary">Click for Full Recipe</a>
-          </div>
+            <h1 class="card-title">GET SOMETHING TO EAT</h1>
+        </a>
+        <p class="card-text">Click the button below to let us offer you a few meal options.</p>
+        <button data-meal="food">Our Suggestions</button>
+        <br />
+        <a href="#top">Back to top of page</a>
         </div>
       </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="assets/images/food_placeholder.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Name of Recipe</h5>
-            <p class="card-text">Some recipe content depending on what the API allows us to pull.</p>
-            <a href="#" class="btn btn-primary">Click for Full Recipe</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="assets/images/food_placeholder.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Name of Recipe</h5>
-            <p class="card-text">Some recipe content depending on what the API allows us to pull.</p>
-            <a href="#" class="btn btn-primary">Click for Full Recipe</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="assets/images/food_placeholder.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Name of Recipe</h5>
-            <p class="card-text">Some recipe content depending on what the API allows us to pull.</p>
-            <a href="#" class="btn btn-primary">Click for Full Recipe</a>
+    </div>
+
+    <div class="container">
+      <div class="row">
+          <div class="col">
+              <div class="card">
+                <div id="mealThumb"></div>
+                <div class="card-body card-background">
+                  <h5 class="card-title" id="recipe">Recipe
+                    <span class="meal"></span>
+                  </h5>
+                </div>
+                <br />
+                <div class="card-body">
+                  <p class="card-text" id="make">How to Make It
+                  </p>
+                  <p>
+                    <span class="instructions"></span>
+                  </p>
+                </div>
+    
+    
+                <p class="list-group-item ingredients">What You Will Need</p>
+                <p class="list-group-item category" id="food-cat">Food Category</p>
+                <p class="list-group-item area" id="food-area">Food Region</p>
+                <div class="card-body up card-background">
+                  <a href="#top">Back to top of page</a>
+                </div>
+              </div>
+            </div>
+        <div class="col">
+          <div class="card">
+            <div id="mealThumb"></div>
+            <div class="card-body card-background">
+              <h5 class="card-title" id="recipe">Recipe
+                <span class="meal"></span>
+              </h5>
+            </div>
+            <br />
+            <div class="card-body">
+              <p class="card-text" id="make">How to Make It
+              </p>
+              <p>
+                <span class="instructions"></span>
+              </p>
+            </div>
+
+
+            <p class="list-group-item ingredients">What You Will Need</p>
+            <p class="list-group-item category" id="food-cat">Food Category</p>
+            <p class="list-group-item area" id="food-area">Food Region</p>
+            <div class="card-body up card-background">
+              <a href="#top">Back to top of page</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <br />
-  <br />
 
-  <!-- DRINK -->
 
-  <div class="container">
-    <div class="card mb-3" id="drink">
-      <a name="drink">
-        <img class="card-img-top" src="assets/images/951077826-2048x2048.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h1 class="card-title">MIX SOMETHING TO DRINK</h1>
-      </a>
-      <p class="card-text">Here list whatever search parameters we want to use from the API.</p>
-      <a href="#" class="btn btn-primary">Click to find a drink</a>
-      <br />
-      <a href="#top">Back to top of page</a>
-      </div>
-    </div>
-  </div>
 
-  <div class="container text-center">
-    <div class="row">
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="assets/images/drink_placeholder.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Name of Drink</h5>
-            <p class="card-text">Some recipe content depending on what the API allows us to pull.</p>
-            <a href="#" class="btn btn-primary">Click for Full Recipe</a>
+    <!-- EAT -->
+    <!--
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="assets/images/food_placeholder.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Name of Recipe</h5>
+              <p class="card-text">Some recipe content depending on what the API allows us to pull.</p>
+              <a href="#" class="btn btn-primary">Click for Full Recipe</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="assets/images/food_placeholder.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Name of Recipe</h5>
+              <p class="card-text">Some recipe content depending on what the API allows us to pull.</p>
+              <a href="#" class="btn btn-primary">Click for Full Recipe</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="assets/images/food_placeholder.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Name of Recipe</h5>
+              <p class="card-text">Some recipe content depending on what the API allows us to pull.</p>
+              <a href="#" class="btn btn-primary">Click for Full Recipe</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="assets/images/food_placeholder.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Name of Recipe</h5>
+              <p class="card-text">Some recipe content depending on what the API allows us to pull.</p>
+              <a href="#" class="btn btn-primary">Click for Full Recipe</a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="assets/images/drink_placeholder.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Name of Drink</h5>
-            <p class="card-text">Some recipe content depending on what the API allows us to pull.</p>
-            <a href="#" class="btn btn-primary">Click for Full Recipe</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="assets/images/drink_placeholder.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Name of Drink</h5>
-            <p class="card-text">Some recipe content depending on what the API allows us to pull.</p>
-            <a href="#" class="btn btn-primary">Click for Full Recipe</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="assets/images/drink_placeholder.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Name of Drink</h5>
-            <p class="card-text">Some recipe content depending on what the API allows us to pull.</p>
-            <a href="#" class="btn btn-primary">Click for Full Recipe</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <br />
-  <br />
-  <br />
+    </div>-->
+    <br />
+    <br />
 
+    <!-- DRINK -->
 
-  <!-- PLAY -->
-
-  <div class="container">
-    <div class="card mb-3" id="play">
-      <a name="play">
-        <img class="card-img-top" src="assets/images/843648918.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h1 class="card-title">FIND SOMETHING TO PLAY</h1>
-      </a>
-      <p class="card-text">Here list whatever search parameters we want to use from the API.</p>
-      <a href="#" class="btn btn-primary">Click to find a game</a>
-      <br />
-      <a href="#top">Back to top of page</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="container text-center">
-    <div class="row">
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="assets/images/game_placeholder.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Name of Game</h5>
-            <p class="card-text">Some game content depending on what the API allows us to pull.</p>
-            <a href="#" class="btn btn-primary">Click to play game</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="assets/images/game_placeholder.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Name of Game</h5>
-            <p class="card-text">Some game content depending on what the API allows us to pull.</p>
-            <a href="#" class="btn btn-primary">Click to play game</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="assets/images/game_placeholder.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Name of Game</h5>
-            <p class="card-text">Some game content depending on what the API allows us to pull.</p>
-            <a href="#" class="btn btn-primary">Click to play game</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="assets/images/game_placeholder.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Name of Game</h5>
-            <p class="card-text">Some game content depending on what the API allows us to pull.</p>
-            <a href="#" class="btn btn-primary">Click to play game</a>
+    <div class="container">
+      <div class="row">
+        <div class="card mb-3" id="drink">
+          <a name="drink">
+            <img class="card-img-top" src="assets/images/951077826-2048x2048.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h1 class="card-title">MIX SOMETHING TO DRINK</h1>
+          </a>
+          <p class="card-text">Here list whatever search parameters we want to use from the API.</p>
+          <a href="#" class="btn btn-primary">Click to find a drink</a>
+          <br />
+          <a href="#top">Back to top of page</a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <br />
-  <br />
 
-  <!-- Footer Information -->
-  <div class="footer">
-    <p>Copyright &#169; 2018</p>
-  </div>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="assets/images/drink_placeholder.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Name of Drink</h5>
+              <p class="card-text">Some recipe content depending on what the API allows us to pull.</p>
+              <a href="#" class="btn btn-primary">Click for Full Recipe</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="assets/images/drink_placeholder.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Name of Drink</h5>
+              <p class="card-text">Some recipe content depending on what the API allows us to pull.</p>
+              <a href="#" class="btn btn-primary">Click for Full Recipe</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="assets/images/drink_placeholder.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Name of Drink</h5>
+              <p class="card-text">Some recipe content depending on what the API allows us to pull.</p>
+              <a href="#" class="btn btn-primary">Click for Full Recipe</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="assets/images/drink_placeholder.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Name of Drink</h5>
+              <p class="card-text">Some recipe content depending on what the API allows us to pull.</p>
+              <a href="#" class="btn btn-primary">Click for Full Recipe</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
 
 
-  <!-- SCRIPT FOR JQUERY -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- PLAY -->
 
-  <!-- SCRIPT FOR GRANIM.JS -->
+    <div class="container">
+      <div class="row">
+        <div class="card mb-3" id="play">
+          <a name="play">
+            <img class="card-img-top" src="assets/images/843648918.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h1 class="card-title">FIND SOMETHING TO PLAY</h1>
+          </a>
+          <p class="card-text">Here list whatever search parameters we want to use from the API.</p>
+          <a href="#" class="btn btn-primary">Click to find a game</a>
+          <br />
+          <a href="#top">Back to top of page</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <script src="assets/javascript/granim.min.js"></script>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="assets/images/game_placeholder.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Name of Game</h5>
+              <p class="card-text">Some game content depending on what the API allows us to pull.</p>
+              <a href="#" class="btn btn-primary">Click to play game</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="assets/images/game_placeholder.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Name of Game</h5>
+              <p class="card-text">Some game content depending on what the API allows us to pull.</p>
+              <a href="#" class="btn btn-primary">Click to play game</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="assets/images/game_placeholder.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Name of Game</h5>
+              <p class="card-text">Some game content depending on what the API allows us to pull.</p>
+              <a href="#" class="btn btn-primary">Click to play game</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="assets/images/game_placeholder.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Name of Game</h5>
+              <p class="card-text">Some game content depending on what the API allows us to pull.</p>
+              <a href="#" class="btn btn-primary">Click to play game</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
 
-  <!-- SCRIPT FOR SITE JAVASCRIPT -->
-  <script src="assets/javascript/edp.js"></script>
+    <!-- Footer Information -->
+    <div class="footer">
+      <p>Copyright &#169; 2018</p>
+    </div>
+
+
+    <!-- SCRIPT FOR JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- SCRIPT FOR GRANIM.JS -->
+
+    <script src="assets/javascript/granim.min.js"></script>
+
+    <!-- SCRIPT FOR SITE JAVASCRIPT -->
+    <script src="assets/javascript/edp.js"></script>
 
 </body>
 
