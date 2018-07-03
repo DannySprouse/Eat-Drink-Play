@@ -1,35 +1,121 @@
+/* Granim.JS code to style canvas */
+
+#canvas-image-blending {
+
+    width: 100%;
+    height: 400px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Styling for Navigation */
+
 #navigation {
     padding-top: 10px;
     text-align: center;
-  }
-
-.header {
-    padding-left: 50px;
+    font-family: 'Passion One', cursive;
 }
 
 .nav-link {
-    background-color:  #0b3c5d;
-    color: #fff;
+    background-color:  #fff;
+    color: #000;
     border-radius: 25px;
     font-size: 25px;
 }
 
 .nav-link:hover {
-    color: yellow;
+    background-color: #0b3c5d;
+    color: #fff;
 }
 
-.nav li {
-    padding-left: 230px;
+/* Styling for Page Narrative */
+
+p.narrative {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 18px;
+    font-family: 'Roboto Condensed', sans-serif;
 }
+
+/* Styling for Eat Drink Play Sections */
 
 #food {
     width: 1200px;
     text-align: center;
+}
 
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.meal-button, .drink-button, .play-button {
+    background-color: #004B27;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+}
+
+.meal-button:hover, .drink-button:hover, .play-button:hover {
+    background-color: #2F9061;
+    color: #fff;
+}
+
+.return-top {
+    text-align: right;
+    padding-right: 25px;
+}
+
+.card-background {
+    background-color: #316384;
+    color: #fff;
+}
+
+.recipe, .beverage, .play {
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.meal-category, .drink-category {
+    text-align: right;
+}
+
+.mealThumb {
+    padding-left: 20px;
+}
+
+.ingredients {
+    padding-left: 50px;
+    font-weight: 700;
+}
+
+.meal-instructions {
+    font-size:  18px;
+}
+
+.suggestButton {
+    text-align: right;
 }
 
 #drink {
     width: 1200px;
+    text-align: center;
+}
+
+.drink-button-center {
     text-align: center;
 }
 
@@ -38,6 +124,7 @@
     text-align: center;
 }
 
+/* Styling for Footer */
 
 .footer {
     position: fixed;
@@ -48,4 +135,4 @@
     background-color: #0b3c5d;
     color: white;
     text-align: center;
-  }
+}
