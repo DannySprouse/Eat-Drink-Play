@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
   // Coding out the granimJS program to overlay banner
 
   var granimInstance = new Granim({
@@ -23,6 +24,7 @@ $(document).ready(function () {
       }
     }
   });
+
 
   // Coding out the eat/meal section of the page
 
