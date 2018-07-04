@@ -20,17 +20,18 @@ $(document).ready(function () {
           ['#80d3fe', '#7ea0c4'],
           ['#f0ab51', '#eceba3']
         ],
-        transitionSpeed: 5000
+        transitionSpeed: 1500
       }
     }
   });
 
-
+  document.getElementById("bttnMealTry").style.visibility = "hidden";
+  document.getElementById("bttnDrinkTry").style.visibility = "hidden";
   // Coding out the eat/meal section of the page
 
   $(".meal-button").on("click", function () {
     var meal = $(this).attr("data-meal");
-
+    document.getElementById("bttnMealTry").style.visibility = "visible";
     var queryURL = "https://www.themealdb.com/api/json/v1/1/random.php";
 
     $.ajax({
@@ -71,83 +72,83 @@ $(document).ready(function () {
         $(".meal-ingredient20").text("");
 
         // If Measure for Ingredients is not blank, write to DOM and include <br> tag
-        if (response.meals[i].strMeasure1 != "") {
+        if ((response.meals[i].strMeasure1 != "") && (response.meals[i].strMeasure1 != null)) {
           $(".meal-ingredient1").html(response.meals[i].strMeasure1 + " " + response.meals[i].strIngredient1 + "<br>");
         };
 
-        if (response.meals[i].strMeasure2 != "") {
+        if ((response.meals[i].strMeasure2 != "") && (response.meals[i].strMeasure2 != null)) {
           $(".meal-ingredient2").html(response.meals[i].strMeasure2 + " " + response.meals[i].strIngredient2 + "<br>");
         };
 
-        if (response.meals[i].strMeasure3 != "") {
+        if ((response.meals[i].strMeasure3 != "")  && (response.meals[i].strMeasure3 != null)){
           $(".meal-ingredient3").html(response.meals[i].strMeasure3 + " " + response.meals[i].strIngredient3 + "<br>");
         };
 
-        if (response.meals[i].strMeasure4 != "") {
+        if ((response.meals[i].strMeasure4 != "")  && (response.meals[i].strMeasure4 != null)){
           $(".meal-ingredient4").html(response.meals[i].strMeasure4 + " " + response.meals[i].strIngredient4 + "<br>");
         };
 
-        if (response.meals[i].strMeasure5 != "") {
+        if ((response.meals[i].strMeasure5 != "")  && (response.meals[i].strMeasure5 != null)){
           $(".meal-ingredient5").html(response.meals[i].strMeasure5 + " " + response.meals[i].strIngredient5 + "<br>");
         };
 
-        if (response.meals[i].strMeasure6 != "") {
+        if ((response.meals[i].strMeasure6 != "")  && (response.meals[i].strMeasure6 != null)) {
           $(".meal-ingredient6").html(response.meals[i].strMeasure6 + " " + response.meals[i].strIngredient6 + "<br>");
         };
 
-        if (response.meals[i].strMeasure7 != "") {
+        if ((response.meals[i].strMeasure7 != "")  && (response.meals[i].strMeasure7 != null)) {
           $(".meal-ingredient7").html(response.meals[i].strMeasure7 + " " + response.meals[i].strIngredient7 + "<br>");
         };
 
-        if (response.meals[i].strMeasure8 != "") {
+        if ((response.meals[i].strMeasure8 != "")  && (response.meals[i].strMeasure8 != null)){
           $(".meal-ingredient8").html(response.meals[i].strMeasure8 + " " + response.meals[i].strIngredient8 + "<br>");
         };
 
-        if (response.meals[i].strMeasure9 != "") {
+        if ((response.meals[i].strMeasure9 != "")  && (response.meals[i].strMeasure9 != null)){
           $(".meal-ingredient9").html(response.meals[i].strMeasure9 + " " + response.meals[i].strIngredient9 + "<br>");
         };
 
-        if (response.meals[i].strMeasure10 != "") {
+        if ((response.meals[i].strMeasure10 != "")  && (response.meals[i].strMeasure10 != null)){
           $(".meal-ingredient10").html(response.meals[i].strMeasure10 + " " + response.meals[i].strIngredient10 + "<br>");
         };
 
-        if (response.meals[i].strMeasure11 != "") {
+        if ((response.meals[i].strMeasure11 != "")  && (response.meals[i].strMeasure11 != null)){
           $(".meal-ingredient11").html(response.meals[i].strMeasure11 + " " + response.meals[i].strIngredient11 + "<br>");
         };
 
-        if (response.meals[i].strMeasure12 != "") {
+        if ((response.meals[i].strMeasure12 != "")  && (response.meals[i].strMeasure12 != null)){
           $(".meal-ingredient12").html(response.meals[i].strMeasure12 + " " + response.meals[i].strIngredient12 + "<br>");
         };
 
-        if (response.meals[i].strMeasure13 != "") {
+        if ((response.meals[i].strMeasure13 != "")  && (response.meals[i].strMeasure13 != null)){
           $(".meal-ingredient13").html(response.meals[i].strMeasure13 + " " + response.meals[i].strIngredient13 + "<br>");
         };
 
-        if (response.meals[i].strMeasure14 != "") {
+        if ((response.meals[i].strMeasure14 != "")  && (response.meals[i].strMeasure14 != null)) {
           $(".meal-ingredient14").html(response.meals[i].strMeasure14 + " " + response.meals[i].strIngredient14 + "<br>");
         };
 
-        if (response.meals[i].strMeasure15 != "") {
+        if ((response.meals[i].strMeasure15 != "")  && (response.meals[i].strMeasure15 != null)){
           $(".meal-ingredient15").html(response.meals[i].strMeasure15 + " " + response.meals[i].strIngredient15 + "<br>");
         };
 
-        if (response.meals[i].strMeasure16 != "") {
+        if ((response.meals[i].strMeasure16 != "")  && (response.meals[i].strMeasure16 != null)){
           $(".meal-ingredient16").html(response.meals[i].strMeasure16 + " " + response.meals[i].strIngredient16 + "<br>");
         };
 
-        if (response.meals[i].strMeasure17 != "") {
+        if ((response.meals[i].strMeasure17 != "")  && (response.meals[i].strMeasure17 != null)){
           $(".meal-ingredient17").html(response.meals[i].strMeasure17 + " " + response.meals[i].strIngredient17 + "<br>");
         };
 
-        if (response.meals[i].strMeasure18 != "") {
+        if ((response.meals[i].strMeasure18 != "")  && (response.meals[i].strMeasure18 != null)){
           $(".meal-ingredient18").html(response.meals[i].strMeasure18 + " " + response.meals[i].strIngredient18 + "<br>");
         };
 
-        if (response.meals[i].strMeasure19 != "") {
+        if ((response.meals[i].strMeasure19 != "")  && (response.meals[i].strMeasure19 != null)){
           $(".meal-ingredient19").html(response.meals[i].strMeasure19 + " " + response.meals[i].strIngredient19 + "<br>");
         };
 
-        if (response.meals[i].strMeasure20 != "") {
+        if ((response.meals[i].strMeasure20 != "")  && (response.meals[i].strMeasure20 != null)){
           $(".meal-ingredient20").html(response.meals[i].strMeasure20 + " " + response.meals[i].strIngredient20 + "<br>");
         };
         // Write Instructions to DOM
@@ -169,7 +170,7 @@ $(document).ready(function () {
 
   $(".drink-button").on("click", function () {
     var drink = $(this).attr("data-drink");
-
+    document.getElementById("bttnDrinkTry").style.visibility = "visible";
     var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
     $.ajax({
@@ -206,62 +207,62 @@ $(document).ready(function () {
         $(".drink-ingredient15").text("");
 
         // If Ingredient field is not blank, write to DOM and include <br> tag
-        if (response.drinks[i].strIngredient1 !== "") {
+        if ((response.drinks[i].strIngredient1 !== "")  && (response.drinks[i].strIngredient1 != null)){
           $(".drink-ingredient1").html(response.drinks[i].strMeasure1 + " " + response.drinks[i].strIngredient1 + "<br>");
         };
 
-        if (response.drinks[i].strIngredient2 !== "") {
+        if ((response.drinks[i].strIngredient2 !== "")   && (response.drinks[i].strIngredient2 != null)){
           $(".drink-ingredient2").html(response.drinks[i].strMeasure2 + " " + response.drinks[i].strIngredient2 + "<br>");
         };
 
-        if (response.drinks[i].strIngredient3 !== "") {
+        if ((response.drinks[i].strIngredient3 !== "")   && (response.drinks[i].strIngredient3 != null)){
           $(".drink-ingredient3").html(response.drinks[i].strMeasure3 + " " + response.drinks[i].strIngredient3 + "<br>");
         };
 
-        if (response.drinks[i].strIngredient4 !== "") {
+        if ((response.drinks[i].strIngredient4 !== "")   && (response.drinks[i].strIngredient4 != null)){
           $(".drink-ingredient4").html(response.drinks[i].strMeasure4 + " " + response.drinks[i].strIngredient4 + "<br>");
         };
 
-        if (response.drinks[i].strIngredient5 !== "") {
+        if ((response.drinks[i].strIngredient5 !== "")   && (response.drinks[i].strIngredient5 != null)){
           $(".drink-ingredient5").html(response.drinks[i].strMeasure5 + " " + response.drinks[i].strIngredient5 + "<br>");
         };
-        if (response.drinks[i].strIngredient6 !== "") {
+        if ((response.drinks[i].strIngredient6 !== "")   && (response.drinks[i].strIngredient6 != null)){
           $(".drink-ingredient6").html(response.drinks[i].strMeasure6 + " " + response.drinks[i].strIngredient6 + "<br>");
         };
 
-        if (response.drinks[i].strIngredient7 !== "") {
+        if ((response.drinks[i].strIngredient7 !== "")   && (response.drinks[i].strIngredient7 != null)){
           $(".drink-ingredient7").html(response.drinks[i].strMeasure7 + " " + response.drinks[i].strIngredient7 + "<br>");
         };
 
-        if (response.drinks[i].strIngredient8 !== "") {
+        if ((response.drinks[i].strIngredient8 !== "")   && (response.drinks[i].strIngredient8 != null)){
           $(".drink-ingredient8").html(response.drinks[i].strMeasure8 + " " + response.drinks[i].strIngredient8 + "<br>");
         };
 
-        if (response.drinks[i].strIngredient9 !== "") {
+        if ((response.drinks[i].strIngredient9 !== "")   && (response.drinks[i].strIngredient9 != null)){
           $(".drink-ingredient9").html(response.drinks[i].strMeasure9 + " " + response.drinks[i].strIngredient9 + "<br>");
         };
 
-        if (response.drinks[i].strIngredient10 !== "") {
+        if ((response.drinks[i].strIngredient10 !== "")   && (response.drinks[i].strIngredient10 != null)){
           $(".drink-ingredient10").html(response.drinks[i].strMeasure10 + " " + response.drinks[i].strIngredient10 + "<br>");
         };
 
-        if (response.drinks[i].strIngredient11 !== "") {
+        if ((response.drinks[i].strIngredient11 !== "")   && (response.drinks[i].strIngredient11 != null)){
           $(".drink-ingredient11").html(response.drinks[i].strMeasure11 + " " + response.drinks[i].strIngredient11 + "<br>");
         };
 
-        if (response.drinks[i].strIngredient12 !== "") {
+        if ((response.drinks[i].strIngredient12 !== "")   && (response.drinks[i].strIngredient12 != null)){
           $(".drink-ingredient12").html(response.drinks[i].strMeasure12 + " " + response.drinks[i].strIngredient12 + "<br>");
         };
 
-        if (response.drinks[i].strIngredient13 !== "") {
+        if ((response.drinks[i].strIngredient13 !== "")   && (response.drinks[i].strIngredient13 != null)){
           $(".drink-ingredient13").html(response.drinks[i].strMeasure13 + " " + response.drinks[i].strIngredient13 + "<br>");
         };
 
-        if (response.drinks[i].strIngredient14 !== "") {
+        if ((response.drinks[i].strIngredient14 !== "")   && (response.drinks[i].strIngredient14 != null)){
           $(".drink-ingredient14").html(response.drinks[i].strMeasure14 + " " + response.drinks[i].strIngredient14 + "<br>");
         };
 
-        if (response.drinks[i].strIngredient15 !== "") {
+        if ((response.drinks[i].strIngredient15 !== "")   && (response.drinks[i].strIngredient15 != null)){
           $(".drink-ingredient15").html(response.drinks[i].strMeasure15 + " " + response.drinks[i].strIngredient15 + "<br>");
         };
 
@@ -279,5 +280,277 @@ $(document).ready(function () {
       }
     });
   });
+
+
+
+//Game Code begins
+
+        // Golbal variable section begins
+        var deckId = "";
+        var cardsRemaining = parseInt(52);
+        var cardValue = "";
+        var cardSuite = "";
+        var cardCode = "";
+        var selectCount = 0;
+        var countDraw = 4;
+        var valuePicked, suitePicked = false;
+        var selectedCards = [];
+        var drawnCards = [];
+        drawCardNow = false;
+        // Golbal variable section ends
+
+        initialLoad();
+        var i=0;
+
+        // Initial Load function creates buttons from the array.
+        initialLoad();
+        keyboardReset("E");
+        newDeckCards();
+
+        function initialLoad(){
+            $("#imgrow1col1").css('background-image', 'url("assets/images/PlayingCard-front2.jpg")');
+            $("#imgrow1col2 img").css('background-image', 'url("assets/images/PlayingCard-front2.jpg")');
+            $("#imgrow2col1 img").css('background-image', 'url("assets/images/PlayingCard-front2.jpg")');
+            $("#imgrow2col2 img").css('background-image', 'url("assets/images/PlayingCard-front2.jpg")');
+            document.getElementById("bttnGameStart").disabled = false;  
+            document.getElementById("bttnDrawCard").disabled = true;  
+            $("#bttnDrawCard").attr("class", "btnStart btn-warning");
+            $("#message").html("Choose you choice of any four cards. Once done, press Draw Cards!");
+        };
+        
+        // Initial Button Reset
+        function keyboardReset(btnRst){
+            var bttnreset = "";
+            for (var i =0; i < 27; i++){
+                var j= i;
+                if (i===0){j = "A"};
+                if (i===1){j = "10"};
+                if (i===10){j = "K"};
+                if (i===11){j = "Q"};
+                if (i===12){j = "J"};
+
+                bttnreset = "bttn" + j;
+                if (btnRst === "E"){
+ 
+                }
+                else{
+    
+                }
+            }
+        };
+
+        // This function Pulls a Deck of Cards- For this game, we do this first time time. This call returns the Deck Id , which will be sued for subsequent calls.
+        function newDeckCards(){
+            var queryURL = "https://deckofcardsapi.com/api/deck/new/";
+
+            $.ajax({
+                url: queryURL,
+                method: "GET"
+            })
+              .then(function(response) {
+              // Following code fetches the response from the query
+              deckId = response.deck_id;
+            });
+        };
+
+        function gameStart(){
+            // First Step is to shuffle the card once more  
+            $("#message").html("Choose your choice of any four cards. Once done, press Draw Cards!");
+            valuePicked = false;
+            suitePicked = false;
+            selectCount = 0;
+            drawCardNow = false;
+            document.getElementById("bttnDrawCard").disabled = true;  
+            $("#bttnDrawCard").attr("class", "btnStart btn-warning");
+            selectedCards.length = 0;  
+            drawnCards.length = 0;  
+            $(".imageCards").empty();
+            $(".imagePCards").empty();
+            // Shuffle cards before start of the game
+            shuffleCards();
+        };
+
+        function shuffleCards(){
+            // shuffle the cards
+            var queryURL = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1";
+
+            $.ajax({
+                url: queryURL,
+                method: "GET"
+            })
+              .then(function(response) {
+              // Following code fetches the response from the query
+              deckId = response.deck_id;
+            });
+        };
+
+        function drawACard(){
+
+            // Drawing a card randomly
+            //https://deckofcardsapi.com/api/deck/<<deck_id>>/draw/?count=2
+
+            // Sorting existing selected Cards array
+            selectedCards.sort();  
+            drawnCards = [];
+            var currentDeckId = deckId;
+            var countToDraw = countDraw;
+
+            var queryURL = "https://deckofcardsapi.com/api/deck/" + currentDeckId + "/draw/?count=" + countDraw;
+
+            $("imageCards").empty();
+            $.ajax({
+                url: queryURL,
+                method: "GET"
+                }).then(function(response) {
+
+                var count = response.cards.length;
+                // Create CODE HERE to Log the queryURL
+
+                var k = 1;
+                $(".imagePCards").empty();
+                for (var i= 0; i < response.cards.length; i++){
+
+                    var itm = "itm" + k;
+                    k++;
+                    drawnCards.push(response.cards[i].code);
+                    var imageDrawnCards = $("<div class='imgitm' id='" + itm + "'>");
+                    $(".imageCards").append(imageDrawnCards);
+                    //Create Image Tag dynamically
+                    var cardImage = $("<img>");
+    
+                    //Setting Image Attributes
+                    //cardImage.attr("src", response.cards[i].images.png);
+                    cardImage.attr("src", response.cards[i].image);
+                    //cardImage.attr({"class": "cardImg"});
+                    cardImage.attr({"width": "150"});
+                    cardImage.attr({"height": "200"});
+                    //cardImage.attr({"float": "left"});
+                    $(imageDrawnCards).append(cardImage);
+                    //Flipping the player selected cards
+                    var imgId = selectedCards[i];
+                    var pURL = 'https://deckofcardsapi.com/static/img/' + imgId + '.png';
+                    var imagePlayerCards = $("<div class='imgitm' id='" + itm + "'>");
+                    $(".imagePCards").append(imagePlayerCards);
+                    var cardPImage = $("<img>");
+                    cardPImage.attr("src", pURL);
+                    //cardPImage.attr({"class": "cardImg"});
+                    cardPImage.attr({"width": "150"});
+                    cardPImage.attr({"height": "200"});
+                    $(imagePlayerCards).append(cardPImage);
+                  };
+
+                  document.getElementById("bttnDrawCard").disabled = true; 
+                  $("#bttnDrawCard").attr("class", "btnStart btn-warning");
+                  drawnCards.sort();
+                  if (selectedCards === drawnCards){
+                      $("#message").html("You Won!!!");
+                  }
+                  else{
+                    $("#message").html("Sorry!. Try again!!!");
+                  }
+            });
+        };
+
+    // Button click logic
+    $("#bttnGameStart").on("click", gameStart);
+
+    $("#bttnDrawCard").on("click", drawACard);
+
+    $(".btn").click(function(){
+        var bttnValue = this.id;
+        bttnValue = bttnValue.substr(4);
+        if (bttnValue === 'S' || bttnValue === 'H' || bttnValue === 'D' || bttnValue === 'C'){
+            cardSuite = bttnValue;
+            suitePicked = true;
+        }
+        else
+        {
+            valuePicked = true;
+            if (bttnValue === '10'){
+                cardValue = bttnValue.substring(1);
+            }
+            else{
+                cardValue = bttnValue;
+            }
+        }
+        // Checking if more than 4 cards are selected. If so It is time to Draw the Cards
+        if (drawCardNow === false) {
+            if (valuePicked && suitePicked){
+                selectCount++;
+                var itm = 0;
+                if (selectCount === 1){
+                    itm = "itm" + selectCount;
+    
+                    valuePicked = false;
+                    suitePicked = false;
+                    var imagePlayerCards = $("<div class='imgitm' id='" + itm + "'>");
+                    $(".imagePCards").append(imagePlayerCards);
+                    var cardPImage = $("<img>");
+                    //cardPImage.attr("src", "assets/images/PlayingCard-front1.jpg");
+                    cardPImage.attr("src", "assets/images/playing-cards-aviator-1.png");
+                    cardPImage.attr({"class": "cardImg"});
+                    cardPImage.attr({"width": "150"});
+                    cardPImage.attr({"height": "200"});
+                    $(imagePlayerCards).append(cardPImage);
+                    selectedCards.push(cardValue + cardSuite);
+                }
+                if (selectCount === 2){
+                    itm = "itm" + selectCount;
+    
+                    valuePicked = false;
+                    suitePicked = false;
+                    var imagePlayerCards = $("<div class='imgitm' id='" + itm + "'>");
+                    $(".imagePCards").append(imagePlayerCards);
+                    var cardPImage = $("<img>");
+                    //cardPImage.attr("src", "assets/images/PlayingCard-front1.jpg");
+                    cardPImage.attr("src", "assets/images/playing-cards-aviator-2.png");
+                    cardPImage.attr({"class": "cardImg"});
+                    cardPImage.attr({"width": "150"});
+                    cardPImage.attr({"height": "200"});
+                    $(imagePlayerCards).append(cardPImage);
+                    selectedCards.push(cardValue + cardSuite);
+                }
+                if (selectCount === 3){
+                    itm = "itm" + selectCount;
+    
+                    valuePicked = false;
+                    suitePicked = false;
+                    var imagePlayerCards = $("<div class='imgitm' id='" + itm + "'>");
+                    $(".imagePCards").append(imagePlayerCards);
+                    var cardPImage = $("<img>");
+                    //cardPImage.attr("src", "assets/images/PlayingCard-front1.jpg");
+                    cardPImage.attr("src", "assets/images/playing-cards-aristocrat-1.png");
+                    cardPImage.attr({"class": "cardImg"});
+                    cardPImage.attr({"width": "150"});
+                    cardPImage.attr({"height": "200"});
+                    $(imagePlayerCards).append(cardPImage);
+                    selectedCards.push(cardValue + cardSuite);
+                }
+                if (selectCount === 4){
+                    itm = "itm" + selectCount;
+    
+                    valuePicked = false;
+                    suitePicked = false;
+                    selectCount = 0;
+                    drawCardNow = true;
+                    var imagePlayerCards = $("<div class='imgitm' id='" + itm + "'>");
+                    $(".imagePCards").append(imagePlayerCards);
+                    var cardPImage = $("<img>");
+                    //cardPImage.attr("src", "assets/images/PlayingCard-front1.jpg");
+                    cardPImage.attr("src", "assets/images/playing-cards-superior-classic-back-1.png");
+                    cardPImage.attr({"class": "cardImg"});
+                    cardPImage.attr({"width": "150"});
+                    cardPImage.attr({"height": "200"});
+                    $(imagePlayerCards).append(cardPImage);
+                    selectedCards.push(cardValue + cardSuite);
+                    document.getElementById("bttnDrawCard").disabled = false;  
+                    $("#bttnDrawCard").attr("class", "btnStart btn-success");
+                    $(this.id).css('color', 'red');
+                }
+            }
+        }
+
+   });
+//Game code ends
 
 }); // closing doc ready
