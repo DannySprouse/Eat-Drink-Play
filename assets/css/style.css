@@ -10,10 +10,10 @@
     left: 0;
     border-radius: 10px;
 }
-
-img0 {
+    /* Styling to force returned meal and drink images to be responsive*/
+.respImage img {
     width: 100%;
-    height: auto;
+    display: block;
 }
 
 /* Styling for Navigation */
@@ -122,6 +122,19 @@ h1 {
 #play {
     width: 1200px;
     text-align: center;
+}
+
+/* Styling for Ordered List */
+
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-bottom: 2em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    font-size: 18px;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 /* Styling for Footer */
