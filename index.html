@@ -29,18 +29,13 @@
   <!-- LINK TO GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Passion+One|Roboto+Condensed" rel="stylesheet" />
 
+  <!-- LINK TO GAME CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/game.css" > 
+
   <!-- LINK TO SITE CSS -->
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-
-  <!-- SCRIPT FOR GRANIM.JS -->
-
-  <script src="assets/javascript/granim.min.js"></script>
-
-  <!-- Link to Game files-->
-  <link rel="stylesheet" type="text/css" href="assets/css/game.css" >  
-  <!-- <script src="assets/javascript/game.js"></script> -->
-
-</head>
+ 
+ </head>
 
 <!-- PAGE CONTENT BEGINS HERE -->
 
@@ -140,7 +135,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-8"> <!-- column 1 of 2 // image on the left side -->
+      <div class="col-md-8 respImage"> <!-- column 1 of 2 // image on the left side -->
         <div class="mealThumb"></div> <!-- Displays prepared dish image -->
       </div>
       <div class="col-md-4"> <!-- column 2 of 2 // ingredients on the right side -->
@@ -243,7 +238,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-8"> <!-- column 1 of 2 // image on the left side -->
+      <div class="col-md-8 respImage"> <!-- column 1 of 2 // image on the left side -->
         <div class="drinkThumb"></div> <!-- Displays prepared drink image -->
       </div>
       <div class="col-md-4"> <!-- column 2 of 2 // ingredients on the right side -->
@@ -306,63 +301,72 @@
       </div>
     </div>
   </div>
+  <div class="container">
+    <div class="row">
+        <div class="col how-to">
+          <p class="text-center narrative">How to Play Card Matching Game</p>
+          <ol>
+            <li>Select your card suit by clicking on the Spade, Heart, Diamond or Club icon.</li>
+            <li>Next select your card face by clicking on the Ace, King, Queen, Jack or one of the number cards.  This will load your first card selection.</li>
+            <li>Repeat the above two steps until you have four face-down cards on your screen.</li>
+            <li>To see if you have won, now click the Draw the Card button to have the computer generate four cards to match against yours.</li>
+            <li>If the computer card on the bottom row matches your card sitting above it you will win.</li>
+            <li>If there is no match you will receive a Sorry! Try again! message next to the card suit row.</li>
+            <li>To play again, simply click the Start the Game button to reset the game and select another four cards following the above instructions.</li>
+          </ol>
+      </div>
+    </div>
+  </div>
 
-  <!-- // Game code starts here -->
+<!-- Game starts here -->
 
-               <!-- Main Body of the Page-->
-          <div class="containerG">
-                <div id="title0"><h3><a><b>Card Matching Game!!!</b></a></h3></div>
-                <hr>
-                <!--  Player Selected Cards will be placed here-->
-                <div id="title1"><h3><a>Selected Cards(row1) &amp; Drawn Cards(row2)</a></h3>
-                        <div id="images" class="col-md-12 side-bar statustable" >
-                                <div id="image_PCards" class="imagePCards">
-                                </div>
-                        </div>                                
-                </div>
-
-                <!--  Game Selected Cards will be placed here-->
-                <div id="title2"><h3><a>Drawn Cards</a></h3>
-                        <div id="images" >
-                                <div id="image_Cards" class="imageCards">
-                                </div>
-                        </div>                               
-                </div>
-                <hr>
-                <!-- Button Group. First button group is for Card Suites. Second group for value cards. -->
-                <!-- Third group of buttons are Game control buttons -->
-                <div id="title3">
-                        <h3><a>Select the Card number</a></h3>
-                        <div class="buttongroup1">
-                        <button id="bttnS"  type="button" onclick="$(this.id, 'S')" value="S" class="btn btn-primary"></button>
-                        <button id="bttnH"  type="button" onclick="$(this.id, 'S')" class="btn btn-primary"></button>
-                        <button id="bttnD"  type="button" onclick="$(this.id, 'S')" class="btn btn-primary"></button>
-                        <button id="bttnC"  type="button" onclick="$(this.id, 'S')" class="btn btn-primary"></button>
-                        <label id="message"></label>
-                        </div>    
-                        <div class="buttongroup2">
-                        <button id="bttnA"  type="button" onclick="$(this.id, 'S')" class="btn btn-primary">A</button>
-                        <button id="bttnK"  type="button" onclick="$(this.id, 'K')" class="btn btn-primary"></button>
-                        <button id="bttnQ"  type="button" onclick="$(this.id, 'Q')" class="btn btn-primary"></button>
-                        <button id="bttnJ"  type="button" onclick="$(this.id, 'J')" class="btn btn-primary"></button>
-                        <button id="bttn10" type="button" onclick="$(this.id, '0')" class="btn btn-primary">10</button>
-                
-                        <button id="bttn9"  type="button" onclick="$(this.id, '9')" class="btn btn-primary">9</button>
-                        <button id="bttn8"  type="button" onclick="$(this.id, '8')" class="btn btn-primary">8</button>
-                        <button id="bttn7"  type="button" onclick="$(this.id, '7')" class="btn btn-primary">7</button>
-                        <button id="bttn6"  type="button" onclick="$(this.id, '6')" class="btn btn-primary">6</button>
-                        <button id="bttn5"  type="button" onclick="$(this.id, '5')" class="btn btn-primary">5</button>
-                        <button id="bttn4"  type="button" onclick="$(this.id, '4')" class="btn btn-primary">4</button>
-                        <button id="bttn3"  type="button" onclick="$(this.id, '3')" class="btn btn-primary">3</button>
-                        <button id="bttn2"  type="button" onclick="$(this.id, '2')" class="btn btn-primary">2</button> 
-                        </div>
-                        <div class="buttongroup4">
-                        <button id="bttnGameStart" type="button"  class="btnStart btn-success">Start the Game</button>
-                        <button id="bttnDrawCard" type="button"  class="btnStart btn-success">Draw the Card</button>
-                        </div>                                                   
-          </div>                                                                
-
-
+<!-- Main Body of the Game -->
+  <div class="containerG">
+    <div id="title0"><h3><a><b>Card Matching Game!!!</b></a></h3></div>
+<hr />
+<!--  Player Selected Cards will be placed here -->
+    <div id="title1"><h3><a>Selected Cards</a></h3>
+      <div id="images" class="col-md-12 side-bar statustable">
+        <div id="image_PCards" class="imagePCards"></div>
+      </div>                                
+    </div>
+<!--  Game Selected Cards will be placed here-->
+    <div id="title2"><h3><a>Drawn Cards</a></h3>
+      <div id="images" >
+        <div id="image_Cards" class="imageCards"></div>
+      </div>                               
+    </div>
+<hr />
+<!-- Button Group: First button group is for Card Suites; Second group for value cards; Third button group holds the Game control buttons -->
+    <div id="title3">
+      <h3><a>Select the Card number</a></h3>
+        <div class="buttongroup1">
+          <button id="bttnS"  type="button" onclick="$(this.id, 'S')" value="S" class="btn btn-primary"></button>
+          <button id="bttnH"  type="button" onclick="$(this.id, 'C')" class="btn btn-primary"></button>
+          <button id="bttnD"  type="button" onclick="$(this.id, 'D')" class="btn btn-primary"></button>
+          <button id="bttnC"  type="button" onclick="$(this.id, 'H')" class="btn btn-primary"></button>
+          <label id="message"></label>
+        </div>    
+        <div class="buttongroup2">
+          <button id="bttnA"  type="button" onclick="$(this.id, 'S')" class="btn btn-primary">A</button>
+          <button id="bttnK"  type="button" onclick="$(this.id, 'K')" class="btn btn-primary"></button>
+          <button id="bttnQ"  type="button" onclick="$(this.id, 'Q')" class="btn btn-primary"></button>
+          <button id="bttnJ"  type="button" onclick="$(this.id, 'J')" class="btn btn-primary"></button>
+          <button id="bttn10" type="button" onclick="$(this.id, '0')" class="btn btn-primary">10</button>
+          <button id="bttn9"  type="button" onclick="$(this.id, '9')" class="btn btn-primary">9</button>
+          <button id="bttn8"  type="button" onclick="$(this.id, '8')" class="btn btn-primary">8</button>
+          <button id="bttn7"  type="button" onclick="$(this.id, '7')" class="btn btn-primary">7</button>
+          <button id="bttn6"  type="button" onclick="$(this.id, '6')" class="btn btn-primary">6</button>
+          <button id="bttn5"  type="button" onclick="$(this.id, '5')" class="btn btn-primary">5</button>
+          <button id="bttn4"  type="button" onclick="$(this.id, '4')" class="btn btn-primary">4</button>
+          <button id="bttn3"  type="button" onclick="$(this.id, '3')" class="btn btn-primary">3</button>
+          <button id="bttn2"  type="button" onclick="$(this.id, '2')" class="btn btn-primary">2</button> 
+        </div>
+        <div class="buttongroup3">
+          <button id="bttnGameStart" type="button"  class="btnStart btn-success">Start the Game</button>
+          <button id="bttnDrawCard" type="button"  class="btnStart btn-success">Draw the Card</button>
+        </div>                                                   
+    </div>                                                                
   </div>
 <br />
 <br />
@@ -383,6 +387,9 @@
 
   <!-- SCRIPT FOR SITE JAVASCRIPT -->
   <script src="assets/javascript/edp.js"></script>
+
+  <!-- SCRIPT FOR GAME JAVASCRIPT -->
+  
 
 </body>
 
