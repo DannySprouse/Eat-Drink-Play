@@ -56,7 +56,7 @@ h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.meal-button, .drink-button, .play-button {
+.meal-button, .drink-button, .play-button, .visits-button {
     background-color: #004B27;
     color: #fff;
     border: none;
@@ -68,7 +68,7 @@ h1 {
     text-align: center;
 }
 
-.meal-button:hover, .drink-button:hover, .play-button:hover {
+.meal-button:hover, .drink-button:hover, .play-button:hover, .visits-button:hover {
     background-color: #2F9061;
     color: #fff;
 }
@@ -133,6 +133,18 @@ ol {
     margin-left: 0;
     margin-right: 0;
     padding-left: 20px;
+    font-size: 18px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+/* Styling for User Input Validation */
+
+#welcome {
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+}
+
+#visits {
     font-size: 18px;
     font-family: 'Roboto Condensed', sans-serif;
 }
