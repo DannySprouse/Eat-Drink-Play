@@ -291,7 +291,6 @@
           <div class="card-body">
             <h1 class="card-title">NOW HAVE SOME FUN</h1>
         </a>
-        <!-- <button data-play="play" class="play-button">Show My Game</button> -->
         <br />
         <div class="return-top">
           <a href="#top">Back to top of page &nbsp;
@@ -314,6 +313,12 @@
             <li>If there is no match you will receive a Sorry! Try again! message next to the card suit row.</li>
             <li>To play again, simply click the Start the Game button to reset the game and select another four cards following the above instructions.</li>
           </ol>
+
+          <!-- Code for User Input Validation -->
+        <p id="visits">We'd love to know how often you have visited us.<br />  Please enter number of times you have been to our page:
+        <input id="number">
+        <button type="button" class="visits-button" onclick="timesHere()">Submit</button></p>
+        <p id="welcome"></p> <!--end UIV-->
       </div>
     </div>
   </div>
@@ -388,9 +393,24 @@
   <!-- SCRIPT FOR SITE JAVASCRIPT -->
   <script src="assets/javascript/edp.js"></script>
 
-  <!-- SCRIPT FOR GAME JAVASCRIPT -->
-  
-
+  <!-- SCRIPT FOR USER INPUT VALIDATION -->
+  <script>
+    function timesHere() {
+      var x, text;
+    
+      // Get the value of the input field with id="number"
+      x = document.getElementById("number").value;
+    
+      // If x is Not a Number or less than one
+      if (isNaN(x) || x < 1) {
+        text = "It seems that input didn't work - try again using only a number greater than 0";
+      } else {
+        text = "Thank you for visiting. Now let's play cards!";
+      }
+      document.getElementById("welcome").innerHTML = text;
+    }
+  </script>
+ 
 </body>
 
 </html>
