@@ -1,1 +1,23 @@
 # ProjectJenDannyJP
+
+EAT. DRINK. PLAY.
+
+Tools:  HTML5, CSS3, Bootstrap4, JavaScript, jQuery, Granim.js, FontAwesome, Google Fonts, Balsamiq, Photoshop
+
+Summary:  This was a team project where we agreed to build an application that would return users a random meal to cook, a random cocktail to mix, and a card game to play.  The team consisted of myself (Danny Sprouse), responsible for UX, UI and front-end development; Jennifer Balangue, responsible for API manipulation and backend coding for the meal database and the cocktail database; and Jay Pillai (JayP), responsible for the game API, backend coding for the game, and assisting with important into the application.  All team members utilized Github to share work, and all worked on debugging the project and presented the project as a group to colleagues.
+
+Problem:  The problem our application was designed to address was for the person who came home tired, and did not want to have to answer the age old question “What am I cooking for dinner?”  This application makes recipe recommendations, as well as cocktail recommendations, and even a game to play to relax.  
+
+Solution:  To create a very simple, streamlined application that was robust in its ability to pull meals and drinks from two separate API, as well as import a single card game API into the HTML.
+
+My Technical Approach:  As the team member responsible for everything front-end, from the UX and UI to coding the HTML, CSS and some JavaScript and jQuery (along with Granim.js), I started with determining the feel we wanted to create with our project.  Our focus was on relaxation, and we wanted something that felt simple and easy to use without a lot of intrusion.  I created four to five mockups using both Balsamiq and Photoshop, ensuring that our page would naturally flow from one element to the next.  I wanted the site to be virtually self-explanatory with a few pieces of narrative as possible, buttons to be intuitive and the information to return in an easy-to-read and clean format.  
+
+I then switched to thinking about the UI, and determining the layout of the page to achieve the UX goals.  I decided on a single-page design to avoid having to jump across multiple webpages.  Because we wanted this application to be very mobile responsive in every way, the single-page design also was a good fit for vertical scrolling.  While the page was not built as a mobile-first application, responsiveness was considered at every step.  I utilized headings and large bold images to highlight each section, easily visible buttons to click, and a linear top to bottom page layout.  I wanted a lot of white space so the user could focus on the three primary purposes of the page and engage in our three calls to action:  pick a meal, pick a drink, and play cards.  Ensured that the fonts were easy to read and only used a few unique fonts to separate key portions of the page (such as the top navigation).  All images were similarly sized and with the same resolution, and each image clearly depicted where the user was on the page.  Navigation was important and there are many points where a user can navigate: the top navigation to main sections, the back to top of page navigation, as well as try again buttons reloading the page to the top of the recipe.  I created a banner image from the pages three primary images in Photoshop.  Because a requirement was to utilize a library never used before, I elected to use the Granim.js library to create a moving gradient over the banner.  I utilized Paletton to ensure that the color scheme worked well and was not a strain on the eye, and that they were all web safe colors.  I then used Photoshop to create a favicon for the page.  
+
+I was also responsible for front-end coding, which included both the HTML and the CSS styling once the data were imported from the APIs.  This included dynamically importing the code created by one team member for the recipes and cocktails, and importing the game.  I also had to code in the Granim.js feature, and modify some of the created backend code to resolve element, class and ID name conflicts.  Finally, because the project required some form of user input validation, I added a simple question field right before the game to inquire how many visits the user had made to the site and set it to limit to only numbers greater than 1, and return a welcome, or return an error for any other input.
+
+Licenses, Credits & Attributions:  All images on this page were used under a purchased license from iStockPhoto or were dynamically generated from the API databases.
+
+Link to Deployed Game:  https://dannysprouse.github.io/Eat-Drink-Play/ 
+
+Copyright ©2018  Danny S. Sprouse  All Rights Reserved
